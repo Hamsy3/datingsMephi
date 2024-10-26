@@ -14,9 +14,10 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val uniqueWorkName = "dailyReminderWork"
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //WorkManager.getInstance(this).cancelAllWork()
+        val uniqueWorkName = "dailyReminderWork"
         val constraints = Constraints.Builder()
             .setRequiresCharging(false) // Не требует зарядки
             .setRequiresBatteryNotLow(true) // Не запускается при низком уровне заряда
