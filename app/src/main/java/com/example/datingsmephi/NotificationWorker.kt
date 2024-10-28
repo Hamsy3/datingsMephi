@@ -18,7 +18,7 @@ class DatingReminderWorker(
         return Result.success()
     }
 
-    private fun sendNotification() {
+     fun sendNotification() {
         val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val channelId = "dating_channel"
 
